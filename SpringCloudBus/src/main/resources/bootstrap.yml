@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: SpringCloud-Bus
+  rabbitmq: #RabbitMQ配置
+    host: 47.106.111.223
+    username: jiajun
+    password: jiajun
+    port: 5672
+
+server:
+  port: 8004
+
+eureka:
+  client:
+    service-url: {defaultZone: 'http://localhost:8000/eureka/'}

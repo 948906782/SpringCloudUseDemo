@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: SpringCloud-Zuul
+
+server:
+  port: 8003
+
+eureka:
+  client:
+    service-url: {defaultZone: 'http://localhost:8000/eureka/'}
+zuul:
+  routes:
+    SpringCloud-Hystirx:
+      path: /SpringCloud-Hystirx/**
+      service-id: SpringCloud-Hystirx
+  host:
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 10000
+
